@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import cv2
 import torchvision.transforms as transforms
 from PIL import Image
-from crop_human_method import *
+from CVND_Exercises_2_2_YOLO.crop_human_method import *
 
 
 
