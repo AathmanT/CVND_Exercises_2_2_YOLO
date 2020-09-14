@@ -18,13 +18,13 @@ import matplotlib.pyplot as plt
 
 
 # Set the location and name of the cfg file
-cfg_file = '/home/aathmant_16/ThEmoBe_basic/CVND_Exercises_2_2_YOLO/cfg/yolov3.cfg'
+cfg_file = '/content/ThEmoBe_basic/CVND_Exercises_2_2_YOLO/cfg/yolov3.cfg'
 
 # Set the location and name of the pre-trained weights file
-weight_file = '/home/aathmant_16/ThEmoBe_basic/yolov3.weights'
+weight_file = '/content/ThEmoBe_basic/yolov3.weights'
 
 # Set the location and name of the COCO object classes file
-namesfile = '/home/aathmant_16/ThEmoBe_basic/CVND_Exercises_2_2_YOLO/data/coco.names'
+namesfile = '/content/ThEmoBe_basic/CVND_Exercises_2_2_YOLO/data/coco.names'
 
 # Load the network architecture
 m = Darknet(cfg_file)
