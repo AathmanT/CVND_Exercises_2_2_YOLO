@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 cfg_file = '/content/ThEmoBe_basic/CVND_Exercises_2_2_YOLO/cfg/yolov3.cfg'
 
 # Set the location and name of the pre-trained weights file
-weight_file = '/content/ThEmoBe_basic/yolov3.weights'
+weight_file = '/content/drive/My Drive/yolov3.weights'
 
 # Set the location and name of the COCO object classes file
 namesfile = '/content/ThEmoBe_basic/CVND_Exercises_2_2_YOLO/data/coco.names'
