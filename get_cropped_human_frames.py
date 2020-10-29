@@ -37,10 +37,27 @@ transform = transforms.Compose(
 
 
 
-def convert_to_frames(video_path):
+def convert_to_frames(video_path,temp_save_path):
 
+    vidcap = cv2.VideoCapture(video_path)
+    success = True
+    count = 0
 
-    frames_list = sorted_alphanumeric(glob.glob(directory + '*.jpg'))
+    # video_folder = video[:-4]
+
+    # save_path = savePath + behavior + '/' + behavior + str(num) + '/'
+    print(temp_save_path)
+    # num = num + 1
+    if not os.path.exists(temp_save_path):
+        os.makedirs(temp_save_path)
+
+    while success:
+        success, frame = vidcap.read()
+        if (success):
+            cv2.imwrite(temp_save_path + "frame%d.jpg" % count, frame)
+            count += 1
+
+    frames_list = sorted_alphanumeric(glob.glob(temp_save_path + '*.jpg'))
     return frames_list
 
 def get_cropped_frames(frames_list):
