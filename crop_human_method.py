@@ -78,6 +78,10 @@ def crop_human(img):
   #Plot the image with bounding boxes and corresponding object class labels
   # plot_boxes(original_image, boxes, class_names, plot_labels = True)
 
-  black[y1:y2, x1:x2] = img[y1:y2, x1:x2]
-
+  try:
+    black[y1:y2, x1:x2] = img[y1:y2, x1:x2]
+  except Exception as e:
+    print(e)
+    print('No human detected')
+      
   return black, [X1,X2,Y1,Y2]
