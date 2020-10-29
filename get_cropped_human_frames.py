@@ -15,14 +15,6 @@ def sorted_alphanumeric(data):
     return sorted(data, key=alphanum_key)
 
 
-video_name = 'scream05'
-directory = '/content/drive/My Drive/Behavior_Data/FearScream/Train/'+video_name+'/'
-frames_list = sorted_alphanumeric(glob.glob(directory+'*.jpg'))
-print(frames_list)
-
-
-
-
 IMG_DIM = 112
 CHANNELS = 3
 input_shape = (CHANNELS, IMG_DIM, IMG_DIM)
