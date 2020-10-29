@@ -46,7 +46,7 @@ def convert_to_frames(video_path,temp_save_path):
     # video_folder = video[:-4]
 
     # save_path = savePath + behavior + '/' + behavior + str(num) + '/'
-    print(temp_save_path)
+    print("temp_save_path ",temp_save_path)
     # num = num + 1
     if not os.path.exists(temp_save_path):
         os.makedirs(temp_save_path)
