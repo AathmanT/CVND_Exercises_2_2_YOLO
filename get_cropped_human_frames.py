@@ -57,17 +57,14 @@ def get_cropped_frames(frames_list):
     coordinates_array = []
     cropped_image_sequence_for_emotion = []
 
-
-    for i in range(15):
+    for i in range(len(frames_list)):
         selected_frame = cv2.imread(frames_list[i])
 
         cropped_behaviour, coordinates = crop_human(selected_frame)
-
         cropped_image_sequence_for_emotion.append(cropped_behaviour)
         cropped_image_sequence_behaviour.append(transform(Image.fromarray(cropped_behaviour)))
 
         coordinates_array.append(coordinates)
-
     cropped_image_sequence = torch.stack(cropped_image_sequence_behaviour)
     return cropped_image_sequence, coordinates_array, cropped_image_sequence_for_emotion
 
