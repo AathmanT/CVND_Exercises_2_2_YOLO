@@ -18,13 +18,13 @@ import matplotlib.pyplot as plt
 
 
 # Set the location and name of the cfg file
-cfg_file = '/content/ThEmoBe/CVND_Exercises_2_2_YOLO/cfg/yolov3.cfg'
+cfg_file = '/root/ThEmoBe/CVND_Exercises_2_2_YOLO/cfg/yolov3.cfg'
 
 # Set the location and name of the pre-trained weights file
-weight_file = '/content/drive/My Drive/yolov3.weights'
+weight_file = '/root/FYP_Model_weights/yolov3.weights'
 
 # Set the location and name of the COCO object classes file
-namesfile = '/content/ThEmoBe/CVND_Exercises_2_2_YOLO/data/coco.names'
+namesfile = '/root/ThEmoBe/CVND_Exercises_2_2_YOLO/data/coco.names'
 
 # Load the network architecture
 m = Darknet(cfg_file)
@@ -83,5 +83,5 @@ def crop_human(img):
   except Exception as e:
     print(e)
     print('No human detected')
-      
+
   return black, [X1,X2,Y1,Y2]
