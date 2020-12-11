@@ -3,6 +3,7 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+from random import randrange
 
 
 def boxes_iou(box1, box2):
@@ -128,12 +129,13 @@ def detect_objects(model, img, iou_thresh, nms_thresh):
     
     # Stop the time. 
     finish = time.time()
-    
-    # Print the time it took to detect objects
-    print('\n\nIt took {:.3f}'.format(finish - start), 'seconds to detect the objects in the image.\n')
-    
-    # Print the number of objects detected
-    print('Number of Objects Detected:', len(boxes), '\n')
+
+    if (randrange(3) == 1):
+        # Print the time it took to detect objects
+        print('\n\nIt took {:.3f}'.format(finish - start), 'seconds to detect the objects in the image.\n')
+
+        # Print the number of objects detected
+        print('Number of Objects Detected:', len(boxes), '\n')
     
     return boxes
 
